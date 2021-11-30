@@ -39,7 +39,7 @@ function App() {
        if (task) {
            task.isDone = isDone;
        }
-       setTasks(tasks);
+       setTasks([...tasks]);
     }
 
 
@@ -59,6 +59,8 @@ function App() {
                       removeTask={removeTask}
                       changeFilter={changeFilter}
                       addTask={addTask}
+                      changeTaskStatus={changeStatus}
+                      filter={filter}
             />
         </div>
     );
